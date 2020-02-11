@@ -1,0 +1,45 @@
+---
+title: "Diamonds Exploration"
+author: "Paul Noble"
+date: "2/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+a. putting diamonds in analysis 
+b. creating a document 
+c. set the working directory to analysis 
+
+### Read the file 
+```{r}
+library(readxl)
+mydiamonds<-read_excel("diamonds.xlsx")
+```
+### Summary 
+```{r}
+summary(mydiamonds)
+```
+### Names of Columns
+```{r}
+names(mydiamonds)
+```
+### Head
+```{r}
+head(mydiamonds)
+```
+### Structure
+```{r}
+str(mydiamonds)
+```
+### Create a new variable 
+```{r}
+mydiamonds$pricetable<-mydiamonds$price+mydiamonds$table
+```
+### More Summary
+```{r}
+head(mydiamonds$pricetable)
+```
+
